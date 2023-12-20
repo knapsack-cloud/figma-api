@@ -1,3 +1,15 @@
+# v1.13.2 (Wed Dec 20 2023)
+
+#### 🐛 Bug Fix
+
+- improve node type [#5](https://github.com/knapsack-cloud/figma-api/pull/5) ([@EvanLovely](https://github.com/EvanLovely))
+
+#### Authors: 1
+
+- Evan Lovely ([@EvanLovely](https://github.com/EvanLovely))
+
+---
+
 # v1.13.1 (Thu Dec 07 2023)
 
 #### 🐛 Bug Fix
