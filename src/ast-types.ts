@@ -81,7 +81,7 @@ export enum LineHeightUnit {
 }
 
 /**
- * Map<StyleType, String>
+ * Record<StyleType, String>
  * A mapping of a StyleType to style ID (see Style) of styles present on this node. The style ID can be used to look up more information about the style in the top-level styles field.
  */
 export type StylesMap = { [styleType in StyleType]: string };
@@ -756,7 +756,7 @@ export interface ComponentProperty {
   /** List of user-defined preferred values for this property. Only exists on INSTANCE_SWAP properties */
   preferredValues?: InstanceSwapPreferredValue[];
   /** A mapping of field to the VariableAlias of the bound variable. */
-  boundVariables?: Map<string, VariableAlias | VariableAlias[]>;
+  boundVariables?: Record<string, VariableAlias | VariableAlias[]>;
 }
 
 /** Component Property Type */
@@ -962,7 +962,7 @@ export interface VECTOR {
   /** Only specified if parameter geometry=paths is used. An array of paths representing the object fill */
   fillGeometry?: Path[];
   /** Map from ID to PaintOverride for looking up fill overrides. To see which regions are overriden, you must use the geometry=paths option. Each path returned may have an overrideId which maps to this table. * */
-  fillOverrideTable: Map<number, PaintOverride>;
+  fillOverrideTable: Record<number, PaintOverride>;
   /** default: [] An array of stroke paints applied to the node */
   strokes: Paint[];
   /** The weight of strokes on the node */
@@ -1066,13 +1066,13 @@ export interface SLICE {
 /** A node that can have instances created of it that share the same properties */
 export type COMPONENT = {
   /** A mapping of name to ComponentPropertyDefinition for every component property on this component. Each property has a type, defaultValue, and other optional values (see property types section * */
-  componentPropertyDefinitions: Map<string, ComponentPropertyDefinition>;
+  componentPropertyDefinitions: Record<string, ComponentPropertyDefinition>;
 } & FRAME;
 
 /** A node that can have instances created of it that share the same properties */
 export type COMPONENT_SET = {
   /** A mapping of name to ComponentPropertyDefinition for every component property on this component. Each property has a type, defaultValue, and other optional values (see property types section * */
-  componentPropertyDefinitions: Map<string, ComponentPropertyDefinition>;
+  componentPropertyDefinitions: Record<string, ComponentPropertyDefinition>;
 } & FRAME;
 
 /** An instance of a component, changes to the component result in the same changes applied to the instance */
@@ -1084,7 +1084,7 @@ export type INSTANCE<ComponentID = string> = FRAME & {
   /** IDs of instances that have been exposed to this node's level */
   exposedInstances?: string[];
   /** A mapping of name to ComponentProperty for all component properties on this instance. Each property has a type, value, and other optional values (see properties type section below) */
-  componentProperties: Map<string, ComponentProperty>;
+  componentProperties: Record<string, ComponentProperty>;
   /** An array of all of the fields directly overridden on this instance. Inherited overrides are not included. */
   overrides: Overrides[];
 };
@@ -1140,9 +1140,9 @@ export type NodeBase<NType extends NodeType = NodeType> = {
   /** Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string "shared". * */
   sharedPluginData: any;
   isFixed?: boolean;
-  boundVariables?: Map<string, VariableAlias | VariableAlias[]>;
+  boundVariables?: Record<string, VariableAlias | VariableAlias[]>;
   /** A mapping of a layer's property to component property name of component properties attached to this node. The component property name can be used to look up more information on the node's containing component's or component set's componentPropertyDefinitions. * */
-  componentPropertyReferences: Map<string, string>;
+  componentPropertyReferences: Record<string, string>;
 } & NodeTypes[NType];
 
 type NodeUnionBase = {
