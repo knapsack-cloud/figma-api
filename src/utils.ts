@@ -1,4 +1,5 @@
 import { AxiosResponse, Method as AxiosMethod } from 'axios';
+import { Node, NodesWithChildren } from './ast-types';
 
 export function toQueryParams(x: any): string {
   if (!x) return '';
@@ -20,3 +21,8 @@ export type ApiRequestMethod = <T>(
   url: string,
   opts?: { method: AxiosMethod; data: string },
 ) => Promise<T>;
+
+export function nodeHasChildren(node: Node): node is NodesWithChildren {
+  // @ts-expect-error - we know this is a valid type
+  return Array.isArray(node.children);
+}
