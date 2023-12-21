@@ -1167,6 +1167,8 @@ export type Node<NType extends NodeType = NodeType> = Extract<
   { type: NType }
 >;
 
+export type NodesWithChildren = Extract<Node, { children: Node[] }>;
+
 export function isNodeType<NType extends NodeType>(
   node: Node<any>,
   type: NType,
