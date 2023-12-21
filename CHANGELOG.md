@@ -1,3 +1,15 @@
+# v1.13.3 (Thu Dec 21 2023)
+
+#### 🐛 Bug Fix
+
+- more type improvements [#6](https://github.com/knapsack-cloud/figma-api/pull/6) ([@EvanLovely](https://github.com/EvanLovely))
+
+#### Authors: 1
+
+- Evan Lovely ([@EvanLovely](https://github.com/EvanLovely))
+
+---
+
 # v1.13.2 (Wed Dec 20 2023)
 
 #### 🐛 Bug Fix
