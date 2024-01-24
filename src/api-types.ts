@@ -167,6 +167,9 @@ export interface GetFileResult {
   lastModified: string;
   thumbnailUrl: string;
   version: string;
+  role: string;
+  editorType: string;
+  linkAccess: string;
   document: Node<'DOCUMENT'>;
   components: { [nodeId: string]: Component };
   componentSets: {
