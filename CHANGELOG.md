@@ -1,3 +1,19 @@
+# v1.13.4 (Wed Mar 27 2024)
+
+#### 🐛 Bug Fix
+
+- Update package.json exports to be default condition [#8](https://github.com/knapsack-cloud/figma-api/pull/8) ([@EvanLovely](https://github.com/EvanLovely))
+
+#### ⚠️ Pushed to `main`
+
+- update auto dep to fix CI publishing ([@EvanLovely](https://github.com/EvanLovely))
+
+#### Authors: 1
+
+- Evan Lovely ([@EvanLovely](https://github.com/EvanLovely))
+
+---
+
 # v1.13.3 (Thu Dec 21 2023)
 
 #### 🐛 Bug Fix
