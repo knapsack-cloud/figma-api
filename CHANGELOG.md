@@ -1,3 +1,15 @@
+# v1.14.0 (Thu Oct 01 2026)
+
+#### 🚀 Enhancement
+
+- fix(deps): move axios to 1.x to clear the 0.21 advisories [#9](https://github.com/knapsack-cloud/figma-api/pull/9) ([@freneticpixel](https://github.com/freneticpixel))
+
+#### Authors: 1
+
+- Jim Frenette ([@freneticpixel](https://github.com/freneticpixel))
+
+---
+
 # v1.13.4 (Wed Mar 27 2024)
 
 #### 🐛 Bug Fix
